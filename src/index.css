@@ -8,7 +8,7 @@ body {
   position: relative;
   margin: auto;
   height: 100%;
-  padding: 50px;
+  margin: 20px 50px;
   max-width: 1800px;
   display: flex;
 }
@@ -31,8 +31,49 @@ body {
 /* Swagger Section */
 
 .swagger-container {
-  padding: 0px 25px;
-  width: 50vw;
+  width: 70vw;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #0083e1a1;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.info-content {
+  padding: 25px;
+  position: relative;
+  min-width: 500px;
+  min-height: 500px;
+  max-height: 850px;
+  overflow: scroll;
+  background: white;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 0; right: 0;
+  margin: 25px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 80%;
+}
+
+.glossary {
+  color: #003676;
+  font-size: 32px;
 }
 
 h1 {
@@ -77,14 +118,13 @@ p {
   position: sticky;
   top: 25px;
   padding: 0px 25px;
-  width: 50vw;
+  width: 30vw;
 }
 
 .step-div {
   margin-bottom: 25px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .circle {
@@ -96,6 +136,7 @@ p {
   justify-content: center;
   align-items: center;
   margin-right: 15px;
+  margin-top: 5px;
 }
 
 .number {
@@ -128,6 +169,10 @@ p {
 
 .step-3 {
   width: 90%;
+}
+
+.step-audio {
+  margin-top: 20px;
 }
 
 /* Controller Section */
@@ -164,12 +209,13 @@ textarea, .response-div {
 .response-div {
   border: 1px solid black;
   border-radius: 2px;
+  max-height: 200px;
+  overflow: scroll;
 }
 
-button {
-  position: absolute;
-  top: 0;
-  right: 0;
+.send-button,
+.save-button {
+  margin-top: 20px;
   padding: 8px 15px;
   font-size: 16px;
   color: white;
@@ -180,6 +226,7 @@ button {
   transition: 2s ease-in-out;
 }
 
-button:hover {
+.send-button:hover,
+.save-button:hover {
   background: linear-gradient(#0084E1, #2f8af8);
 }

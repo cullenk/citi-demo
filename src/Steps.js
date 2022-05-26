@@ -26,12 +26,19 @@ export default function Steps() {
                     <p className='step-paragraph'>Choose your API Access Level which will drive the security recipe of controls applied to your API including Authentication and Authorization:</p>
                     <div className='margin-bottom-10 flex-container'>
                         <input type="radio" id="pre-login" name="access-level" value="pre-login" />
-                        <label for="pre-login">Pre-Login</label>
+                        <label htmlFor="pre-login">Pre-Login</label>
                     </div>
                     <div className='flex-container'>
                         <input type="radio" id="post-login" name="access-level" value="post-login" />
-                        <label for="post-login">Post-Login</label>
+                        <label htmlFor="post-login">Post-Login</label>
                     </div>
+                    <audio className="step-audio" controls>
+                        <source src="horse.ogg" type="audio/ogg" />
+                        <source src="horse.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                    <br/>
+                    <button className='save-button'>Save</button>
                 </div>
             </div>
 
